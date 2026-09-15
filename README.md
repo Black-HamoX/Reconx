@@ -90,19 +90,22 @@ reconx
 ### 🐉 Kali Linux
 
 ```bash
-sudo apt update && sudo apt upgrade -y
 
-sudo apt install python3 python3-pip git -y
+sudo apt install python3 python3-pip python3-venv git -y
 
 git clone https://github.com/Black-HamoX/Reconx
 
 cd reconx
 
-pip3 install -r requirements.txt
+python3 -m venv venv
 
-pip3 install -e .
+source venv/bin/activate
 
-reconx
+pip install -r requirements.txt
+
+pip install -e .
+
+reconx -h
 ```
 
 Once installed, run it from anywhere:
